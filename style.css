@@ -1,0 +1,526 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 12px;
+  background: linear-gradient(135deg, #f57308, #fff, rgb(11, 242, 7));
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #1a6ad2, #fff, rgb(245, 5, 53));
+}
+
+section {
+  padding: 100px 0;
+}
+
+.max-width {
+  max-width: 1300px;
+  padding: 0 80px;
+  margin: auto;
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+  padding: 30px 0;
+  font-family: "Ubuntu", sans-serif;
+  transition: all 0.3s ease;
+}
+
+.navbar.sticky {
+  padding: 15px 0;
+  background: #1e3551;
+}
+
+.navbar .max-width {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar .logo a {
+  color: #fff;
+  font-size: 35px;
+  font-weight: 600;
+}
+
+.navbar .logo a span {
+  background: linear-gradient(135deg, #000000, rgb(255, 0, 0), rgb(75, 3, 255));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.3s ease;
+}
+
+.navbar.sticky .logo a span {
+  color: #fff;
+}
+
+.navbar .menu li {
+  list-style: none;
+  display: inline-block;
+}
+
+.navbar .menu li a {
+  display: block;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  margin-left: 25px;
+  transition: color 0.3s ease;
+}
+
+.navbar .menu li a:hover {
+  color: #1e3551;
+}
+
+.navbar.sticky .menu li a:hover {
+  color: #fff;
+}
+
+/* Scroll Up Button */
+.scroll-up-btn {
+  position: fixed;
+  height: 45px;
+  width: 42px;
+  background: #1e3551;
+  right: 30px;
+  bottom: 10px;
+  text-align: center;
+  line-height: 45px;
+  color: #fff;
+  z-index: 9999;
+  font-size: 30px;
+  border-radius: 6px;
+  border-bottom-width: 2px;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.scroll-up-btn.show {
+  bottom: 30px;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.scroll-up-btn:hover {
+  filter: brightness(90%);
+}
+
+/* Home Section */
+.home {
+  display: flex;
+  background: url("https://source.unsplash.com/720x600/?dark,laptop") no-repeat
+    center;
+  height: 100vh;
+  color: #fff;
+  min-height: 500px;
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.home .max-width {
+  width: 100%;
+  display: flex;
+}
+
+.home .home-content .text-1 {
+  font-size: 27px;
+}
+
+.home .home-content .text-2 {
+  font-size: 75px;
+  font-weight: 600;
+  margin-left: -3px;
+}
+
+.home .home-content .text-3 {
+  font-size: 40px;
+  margin: 5px 0;
+}
+
+.home .home-content .text-3 span {
+  color: #1e3551;
+  background: linear-gradient(135deg, #000000, rgb(255, 0, 0), rgb(30, 0, 255));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 500;
+}
+
+.home .home-content a {
+  display: inline-block;
+  background: #1e3551;
+  color: #fff;
+  font-size: 25px;
+  padding: 12px 36px;
+  margin-top: 20px;
+  font-weight: 400;
+  border-radius: 6px;
+  border: 2px solid #1e3551;
+  transition: all 0.3s ease;
+}
+
+.home .home-content a:hover {
+  color: #1e3551;
+  background: none;
+  animation: pulsate 1s ease-in-out;
+}
+
+/* About Section */
+.about {
+  background: radial-gradient(rgb(246, 245, 245), rgb(0, 0, 0));
+  padding: 50px 0;
+}
+
+.max-width {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.column {
+  width: 100%;
+  max-width: 600px;
+  padding: 20px;
+}
+
+.left img {
+  width: 200px; /* Adjust the image size */
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%; /* Circular image */
+  margin-bottom: 20px;
+}
+
+.right .text {
+  font-size: 25px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.right p {
+  font-size: 18px;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+.right .text span {
+  background: linear-gradient(
+    135deg,
+    #000000,
+    rgb(254, 4, 4),
+    rgba(0, 30, 255, 0.843)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@media (max-width: 768px) {
+  .about-content {
+    padding: 20px;
+  }
+
+  .left img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .right .text {
+    font-size: 20px;
+  }
+}
+
+/* Services Section */
+/* Services Section */
+/* General Style for the Sections */
+.services,
+.meals {
+  color: #fff;
+  background: #111;
+  padding: 40px 0;
+}
+
+.title {
+  font-size: 36px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* Services Section */
+.services .serv-content {
+  display: flex;
+  flex-wrap: wrap; /* Allows the cards to wrap to the next line */
+  justify-content: space-between; /* Adds space between the cards */
+  gap: 20px; /* Adds some space between the cards */
+}
+
+.services .serv-content .card {
+  width: calc(33% - 20px); /* Ensures 3 cards per row with space between */
+  background: #222;
+  text-align: center;
+  border-radius: 10px;
+  padding: 50px 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.services .serv-content .card:hover {
+  background: #1e3551;
+}
+
+.services .serv-content .card i {
+  font-size: 50px;
+  color: #888e8d;
+  background: linear-gradient(135deg, #041d3d, #fff, crimson);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: color 0.3s ease;
+}
+
+.services .serv-content .card:hover i {
+  color: #fff;
+}
+
+.services .serv-content .card .text {
+  font-size: 25px;
+  font-weight: 500;
+  margin: 10px 0 7px 0;
+}
+
+.services .serv-content .card p {
+  font-size: 16px;
+  color: #ddd;
+  margin-bottom: 20px;
+}
+
+.services .serv-content .card .box {
+  transition: all 0.3s ease;
+}
+
+.services .serv-content .card:hover .box {
+  transform: scale(1.05);
+}
+
+/* Meals Section */
+.meals .card {
+  background-color: #333;
+  border: none;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.meals .card:hover {
+  transform: scale(1.05);
+}
+
+.meals .card-img-top {
+  border-radius: 10px 10px 0 0;
+  object-fit: cover;
+  height: 200px;
+}
+
+.meals .card-body {
+  text-align: center;
+}
+
+.meals .btn-primary {
+  background-color: #1e3551;
+  border-color: #1e3551;
+}
+
+.meals .btn-primary:hover {
+  background-color: #041d3d;
+  border-color: #041d3d;
+}
+
+/* Meal Cards Layout */
+.meals .row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.meals .col-md-4 {
+  flex: 1 1 calc(33% - 20px); /* 3 cards per row */
+  margin-bottom: 20px;
+}
+
+.meals .col-md-4 .card {
+  background-color: #333;
+  border: none;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.meals .col-md-4 .card:hover {
+  transform: scale(1.05);
+}
+
+/* Media Queries for Responsive Design */
+@media screen and (max-width: 768px) {
+  .services .serv-content .card {
+    width: 100%; /* Stack cards vertically on smaller screens */
+    margin-bottom: 20px;
+  }
+
+  .meals .col-md-4 {
+    flex: 1 1 100%; /* Stack meal cards vertically on smaller screens */
+  }
+}
+
+/* Footer */
+.footer {
+  background: #111;
+  color: #fff;
+  text-align: center;
+  padding: 30px 0;
+}
+
+.footer .footer-content a {
+  color: #fff;
+  font-size: 20px;
+  margin: 10px;
+  text-decoration: none;
+}
+.home {
+  display: flex;
+  background: url("https://source.unsplash.com/720x600/?dark,laptop") no-repeat
+    center;
+  height: 100vh;
+  color: #fff;
+  min-height: 500px;
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: "Ubuntu", sans-serif;
+}
+.contact {
+  background-color: #111;
+  padding: 60px 0;
+  color: #fff;
+}
+
+.contact .title {
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.contact-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.contact .icons i {
+  font-size: 24px;
+  margin-right: 10px;
+  color: #fff;
+}
+
+.contact .icons .row {
+  margin-bottom: 20px;
+}
+
+.contact .form-group input,
+.contact .form-group textarea {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 20px;
+  background-color: #222;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+}
+
+.contact .form-group textarea {
+  resize: vertical;
+}
+
+.contact button {
+  background-color: #1e3551;
+  border: none;
+  color: #fff;
+  padding: 15px 30px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.3s ease;
+}
+
+.contact button:hover {
+  background-color: #041d3d;
+}
+
+footer {
+  background-color: #111;
+  padding: 20px 0;
+  text-align: center;
+  color: #fff;
+}
+
+footer .social-menu ul {
+  list-style: none;
+  padding: 0;
+}
+
+footer .social-menu ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+footer .social-menu ul li a {
+  color: #fff;
+  font-size: 24px;
+  text-decoration: none;
+}
+
+footer .social-menu ul li a:hover {
+  color: #1e3551;
+}
+
+.footer .footer-content a:hover {
+  color: #1e3551;
+}
+
+/* Keyframe Animation */
+@keyframes pulsate {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

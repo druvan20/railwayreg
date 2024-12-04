@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Booking Details</title>
+    <link rel="stylesheet" href="booking.css" />
+    <!-- Link to your external CSS file -->
+  </head>
+  <body>
+    <section class="booking-section">
+      <div class="booking-container">
+        <h1>Booking Details</h1>
+        <form method="POST">
+          <!-- From location -->
+          <div class="inputbox">
+            <label for="from">From</label>
+            <input
+              type="text"
+              name="from"
+              id="from"
+              required
+              placeholder="Enter departure location"
+            />
+          </div>
+
+          <!-- To location -->
+          <div class="inputbox">
+            <label for="to">To</label>
+            <input
+              type="text"
+              name="to"
+              id="to"
+              required
+              placeholder="Enter destination location"
+            />
+          </div>
+
+          <!-- Date -->
+          <div class="inputbox">
+            <label for="date">Date</label>
+            <input type="date" name="date" id="date" required />
+          </div>
+
+          <!-- Departure Time -->
+          <div class="inputbox">
+            <label for="departure-time">Departure Time</label>
+            <input
+              type="time"
+              name="departure-time"
+              id="departure-time"
+              required
+            />
+          </div>
+
+          <!-- Arrival Time -->
+          <div class="inputbox">
+            <label for="arrival-time">Arrival Time</label>
+            <input type="time" name="arrival-time" id="arrival-time" required />
+          </div>
+
+          <!-- Class -->
+          <div class="inputbox">
+            <label for="class">Class</label>
+            <select name="class" id="class" required>
+              <option value="economy">Economy</option>
+              <option value="business">Business</option>
+              <option value="first-class">First Class</option>
+            </select>
+          </div>
+
+          <!-- Number of Members -->
+          <div class="inputbox">
+            <label for="members">Number of Members</label>
+            <input
+              type="number"
+              name="members"
+              id="members"
+              required
+              min="1"
+              placeholder="Enter number of members"
+            />
+          </div>
+
+          <!-- Seat Selection -->
+          <div class="inputbox">
+            <label for="seat">Select Seat</label>
+            <select name="seat" id="seat" required>
+              <option value="seat1">Seat 1</option>
+              <option value="seat2">Seat 2</option>
+              <option value="seat3">Seat 3</option>
+              <option value="seat4">Seat 4</option>
+              <option value="seat5">Seat 5</option>
+            </select>
+          </div>
+
+          <!-- Submit Button -->
+          <button type="submit" class="btn">Book Now</button>
+        </form>
+        <!-- Home link -->
+        <a href="index.html" class="home-link">Home</a>
+      </div>
+    </section>
+
+    <script>
+      // Example: Dynamically populating available seats
+      const availableSeats = ["seat1", "seat3", "seat5"]; // Example
+      const seatSelect = document.getElementById("seat");
+
+      availableSeats.forEach((seat) => {
+        const option = document.createElement("option");
+        option.value = seat;
+        option.textContent = seat;
+        seatSelect.appendChild(option);
+      });
+    </script>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2024 Railway Reservation. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

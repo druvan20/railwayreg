@@ -1,0 +1,86 @@
+/* General page layout */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Ensuring the footer is always at the bottom */
+footer {
+  margin-top: auto;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Booking section */
+.booking-section {
+  padding: 50px 20px;
+  background-color: #f7f7f7;
+  min-height: calc(100vh - 160px); /* Adjust for footer height */
+}
+
+/* Container for the form */
+.booking-container {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+/* Input box style */
+.inputbox {
+  margin-bottom: 20px;
+}
+
+.inputbox label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.inputbox input,
+.inputbox select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Button style */
+.btn {
+  width: 100%;
+  padding: 10px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.btn:hover {
+  background-color: #45a049;
+}
+
+/* Home link styling */
+.home-link {
+  display: inline-block;
+  margin-top: 20px;
+  color: black;
+  font-size: 16px;
+  text-decoration: none;
+  text-align: center;
+  width: 100%;
+}
+
+.home-link:hover {
+  text-decoration: underline;
+}
